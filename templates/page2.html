@@ -3,3 +3,17 @@
 {% block title %}Page 2: Name{% endblock %}
 
 {% block content %}
+
+<h1>
+Question 2: Who was prophesied to be the Chosen One by the Jedi Order
+</h1>
+
+<form action={{ url_for("renderPage3") }} method="POST">
+<label for="q2">Choose the correct answer:</label>
+<select id="q2" name="q2">
+<option value="lSky">Luke Skywalker</option>
+<option value="Obi">Obi-Wan Kenobi</option>
+<option value="aSky">Anakin Skywalker</option>
+<option value="leia">Leia Skywalker</option>
+<input type="submit" value="Submit">
+</select>

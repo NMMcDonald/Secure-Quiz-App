@@ -20,10 +20,15 @@ def retakeQuiz():
 def renderPage1():
     return render_template('page1.html')
 
-@app.route('/page2')
+@app.route('/page2',methods=['GET','POST'])
 def renderPage2():
+    session["q2"]=request.form['q2']
     return render_template('page2.html')
 
-@app.route('/page3')
+@app.route('/page3',methods=['GET','POST'])
 def renderPage3():
+    session["q3"]=request.form['q3']
     return render_template('page3.html')
+
+if __name__=="__main__":
+    app.run(debug=True)
